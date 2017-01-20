@@ -1,0 +1,32 @@
+body {
+	box-sizing: 100%;
+}
+#screen {
+	box-sizing: 50%;
+	margin-left: 40%;
+	margin-top: 10%
+}
+.g {
+	background: black;
+	height: 3em;
+	width: 3em;
+	border: 0.1em solid black;
+	border-radius: 0.5em;
+	padding: 1%;
+	display: inline-block;
+}
+#button {
+	margin-left: 37%;
+	margin-top: 5%
+}
+button {
+	background: white;
+	border: 0.1em solid black;
+	border-radius: 0.5em;
+	width: 15%;
+	cursor: pointer;
+	outline: none;
+}
+button:hover {
+	background: #F3F781;
+}
