@@ -1,56 +1,76 @@
 jQuery(document).ready(function($) {
 	//state
-	var stat=false;
 	var run;
+	//choose 3 position
+	function choosePosition(length) {
+		var positions=[];
+		for(var i=length;i>0;i--) {
+			var position = Math.floor(Math.random()*9+1);
+			positions.push(position);
+		}
+		return positions;
+	}//pb
+	//check repetition
+	function checkRepetion(array) {
+		var check=[false,false,false,false,false,false,false,false,false,false];
+		for(var i=array.length-1;i>=0;i--) {
+			if(check[array[i]]) {
+				return true;
+			}
+			else {
+				check[array[i]]=true;
+			}
+		}//for
+		return false;
+	}
+	//confirm positions
+	function confirmPositions(num) {
+		var positions;
+		while(positions=choosePosition(num)) {
+			if(!checkRepetion(positions)){
+				return positions;
+			}
+		}
+	}
+	//choose color
+	function chooseColors(num) {
+		var colors=[];
+		for(var i=num;i>0;i--) {
+			var rgb1 = Math.floor(Math.random()*256);
+			var rgb2 = Math.floor(Math.random()*256);
+			var rgb3 = Math.floor(Math.random()*256);
+			var color ='rgb('+rgb1+','+rgb2+','+rgb3+')';
+			colors.push(color);
+		}
+		return colors;
+	}
+	//change colors
+	function changeColor() {
+		//reset
+		$('.g').css('background','black');
+		var positions =confirmPositions(3);
+		console.log(positions);
+		var colors =chooseColors(3);
+		for(var i=0;i<positions.length;i++) {
+			$('#g'+positions[i]).css('background',colors[i]);
+		}//for
+	}//fuc ccr
+	function start() {
+		run=setInterval(changeColor,1000);
+	}
+	function stop() {
+		clearInterval(run);
+	}
 	$('#bt_1').click(function() {
 		//the button only permite to click once
+
 		$(this).attr("disabled","disabled");
 		//start to change
-		run=window.setInterval(function(){
-			//reset
-			for (var i=1; i<10; i++) {
-				$('#g'+i).css('background','black')
-			}//for
-			//func of change color
-			function changeColor() {
-				//func of check repetition
-				function chaChong(array,num) {
-					for(var i=array.length-1;i>=0;i--) {
-						if(array[i]==num) {
-						return false;
-						}//if
-					}//for
-					return true;
-				}//cc
-				var positions=['a','b','c'];
-				for(var i=0;i<3;i++) {
-					var position = Math.floor(Math.random()*9+1);
-					if(chaChong(positions,position)) {
-						positions[i]=position;
-						var rgb1 = Math.floor(Math.random()*256);
-						var rgb2 = Math.floor(Math.random()*256);
-						var rgb3 = Math.floor(Math.random()*256);
-						$('#g'+positions[i]).css('background','rgb('+rgb1+','+rgb2+','+rgb3+')');
-					}//if
-					else {
-						i--;
-						continue;
-					}//else
-				}//for
-			}//fuc ccr
-			changeColor();
-		},1000);
-		
-		
-		
-		
+		start();
 	});//click
 	$('#bt_2').click(function() {
+		stop();
 		$('#bt_1').removeAttr('disabled');
-		window.clearInterval(run);
-		console.log('b');
-		for (var i=1; i<10; i++) {
-			$('#g'+i).css('background','black')
-		}//for
+		$('.g').css('background','black');
 	});//click
 });
