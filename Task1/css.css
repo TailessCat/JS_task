@@ -1,10 +1,9 @@
 body {
-	box-sizing: 100%;
+	max-width: 500px;
+	margin: 10% auto;
 }
-.sc {
-	box-sizing: 50%;
-	padding-top: 10%;
-	padding-left: 42%;
+.border {
+	padding-left: 33%;
 }
 .g {
 	float: left;
@@ -24,19 +23,28 @@ body {
 }
 .bt {
 	clear: left;
-	padding-left: 40%;
-	padding-top: 5%
 }
 button {
 	float:left;
 	background: white;
 	border: 1px solid black;
 	border-radius: 5px;
-	width: 15%;
+	width: auto;
 	cursor: pointer;
 	outline: none;
 	margin: 1%;
 }
 button:hover {
 	background: #F3F781;
+}
+input {
+	float:left;
+	clear: left;
+	outline: none;
+	background: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	width: auto;
+	padding-left: 1%;
+	margin-top: 1%;
 }
