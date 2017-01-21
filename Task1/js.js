@@ -49,28 +49,26 @@ jQuery(document).ready(function($) {
 		//reset
 		$('.g').css('background','black');
 		var positions =confirmPositions(3);
-		console.log(positions);
 		var colors =chooseColors(3);
 		for(var i=0;i<positions.length;i++) {
 			$('#g'+positions[i]).css('background',colors[i]);
 		}//for
 	}//fuc ccr
 	function start() {
+		//the button only permite to click once
+		$(this).attr("disabled","disabled");
 		run=setInterval(changeColor,1000);
 	}
 	function stop() {
 		clearInterval(run);
+		$('#bt_1').removeAttr('disabled');
+		$('.g').css('background','black');
 	}
 	$('#bt_1').click(function() {
-		//the button only permite to click once
-
-		$(this).attr("disabled","disabled");
 		//start to change
 		start();
 	});//click
 	$('#bt_2').click(function() {
 		stop();
-		$('#bt_1').removeAttr('disabled');
-		$('.g').css('background','black');
-	});//click
+		});//click
 });
