@@ -1,31 +1,41 @@
 body {
 	box-sizing: 100%;
 }
-#screen {
+.sc {
 	box-sizing: 50%;
-	margin-left: 40%;
-	margin-top: 10%
+	padding-top: 10%;
+	padding-left: 42%;
 }
 .g {
+	float: left;
 	background: black;
-	height: 3em;
-	width: 3em;
-	border: 0.1em solid black;
-	border-radius: 0.5em;
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	border-radius: 5px;
 	padding: 1%;
-	display: inline-block;
+	margin: 0.1%;
 }
-#button {
-	margin-left: 37%;
-	margin-top: 5%
+.r2 {
+	clear: left;
+}
+.r3 {
+	clear: left;
+}
+.bt {
+	clear: left;
+	padding-left: 40%;
+	padding-top: 5%
 }
 button {
+	float:left;
 	background: white;
-	border: 0.1em solid black;
-	border-radius: 0.5em;
+	border: 1px solid black;
+	border-radius: 5px;
 	width: 15%;
 	cursor: pointer;
 	outline: none;
+	margin: 1%;
 }
 button:hover {
 	background: #F3F781;
