@@ -1,8 +1,16 @@
 jQuery(document).ready(function($) {
+	//state
+	var stat=false;
 	var run;
 	$('#bt_1').click(function() {
+		//the button only permite to click once
+		$(this).attr("disabled","disabled");
 		//start to change
 		run=window.setInterval(function(){
+			//reset
+			for (var i=1; i<10; i++) {
+				$('#g'+i).css('background','black')
+			}//for
 			//func of change color
 			function changeColor() {
 				//func of check repetition
@@ -38,6 +46,7 @@ jQuery(document).ready(function($) {
 		
 	});//click
 	$('#bt_2').click(function() {
+		$('#bt_1').removeAttr('disabled');
 		window.clearInterval(run);
 		console.log('b');
 		for (var i=1; i<10; i++) {
