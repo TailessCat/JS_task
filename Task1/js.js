@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
 	}//fuc ccr
 	function start() {
 		//the button only permite to click once
-		$(this).attr("disabled","disabled");
+		$('#bt_1').attr("disabled","disabled");
 		run=setInterval(changeColor,1000);
 	}
 	function stop() {
