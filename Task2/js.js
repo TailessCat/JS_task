@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
 	$('input').val('6');
+	var ids=[];
 	function confirmIentity(num) {
 		var identities =[];
 		//0
@@ -30,6 +31,7 @@ jQuery(document).ready(function($) {
 
 	function showOnTheScreen(num) {
 		var identities=confirmIentity(num);
+		ids=identities;
 		for(var j=1,i=identities.length;j<=i;j++) {
 			var id;
 			if(identities[j]==0) {
