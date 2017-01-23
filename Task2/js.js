@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+	$('input').val('6');
 	function confirmIentity(num) {
 		var identities =[];
 		//0
@@ -43,7 +44,7 @@ jQuery(document).ready(function($) {
 	}
 	function reDistribute() {
 		$('.player_list').empty();
-		var num=Number($('.num').html());
+		var num=$('.num').html();
 		showOnTheScreen(num);
 	}
 
@@ -55,10 +56,9 @@ jQuery(document).ready(function($) {
 	function plus() {
 		var num=Number($('.num').html())+1;
 		if(num<=18){
-			left=(num-6)*5.4;
-			$('.slider').css('margin-left',left+'%');
 			$('.num').html(num);
-		}	
+			$('input').val(num);
+		}
 	}
 	//click to plus one
 	$('.plus').click(function(){
@@ -68,9 +68,8 @@ jQuery(document).ready(function($) {
 	function minus() {
 		var num=Number($('.num').html())-1;
 		if(num>=6){
-			left=(num-6)*5.4;
-			$('.slider').css('margin-left',left+'%');
 			$('.num').html(num);
+			$('input').val(num);
 		}	
 	}
 	//click to minus one
@@ -78,7 +77,18 @@ jQuery(document).ready(function($) {
 		minus();
 	})
 	//move
-	$('.slider').mousedown(function(event) {
-
+	$('.slider').mousemove(function() {
+		var num=Number($('#slider').val());
+		$('.num').html(num);
 	});
+	//GO
+	$('.begin_bt').click(function(){
+		if(!$('li').html()){
+			var $text="<p class='alert'>先选身份啊兄弟！<p>";	
+			$('body').append($text);
+			setTimeout(function(){
+				$('.alert').remove()},1000);
+		}
+	})		
+	
 });
