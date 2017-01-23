@@ -54,6 +54,7 @@ body {
 	cursor: pointer;
 	font-size: 200%;
 	margin-right: 5%;
+	margin-top: 12%;
 }
 .plus:hover {
 	color: #E62E2E;
@@ -61,10 +62,11 @@ body {
 .minus {
 	color: #FF5825;
 	width: 3%;
-	margin-left: -80%;
+	margin-left: 3%;
 	display: inline-block;
 	cursor: pointer;
 	font-size: 200%;
+	margin-top: 12%;
 }
 .minus:hover {
 	color: #E62E2E;
@@ -92,22 +94,32 @@ body {
 	margin-bottom: -10%;
 	font-family: "Microsoft YaHei", serif;
 }
-.line {
-	float: left;
-	border: 1px solid #FF5825;
+input[type=range] {
+  	-webkit-appearance: none;
+ 	display: inline-block;
 	width: 70%;
-	cursor: default;
-	margin-top: 14.5%;
-	margin-left: 15%;
-}
-.slider {
-	display: inline-block;
-	height: 20px;
-	width: 10%;
-	background: #E62E2E;
+	margin-left: 6%;
 	cursor: pointer;
-	color: #E62E2E;
-	margin-left: 4%;
+	outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 70%;
+  height: 3px;
+  background: #FF5825;
+  border-radius: 1px;
+  cursor: default;
+  margin-top: -9%;
+}
+input[type=range]::-webkit-slider-thumb {
+  border: 1px solid #E62E2E;
+  height: 5%;
+  width: 5%;
+  border-radius: 10px;
+  border: solid 10px #E62E2E;
+  background: #E62E2E;
+  cursor: pointer;
+  margin-top: -3%;
+  -webkit-appearance: none;
 }
 li {
 	width: 33.3%;
@@ -124,4 +136,12 @@ li:hover {
 }
 .num {
 	color: #FF1919;
+}
+.alert {
+	max-width: 300px;
+	max-height: 100px;
+	color: #E62E2E;
+	font-family: "Microsoft YaHei", serif;
+	margin-left: 30%;
+	cursor: default;
 }
