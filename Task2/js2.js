@@ -32,15 +32,15 @@ jQuery(document).ready(function($) {
 	function showOnTheScreen(num) {
 		var identities=confirmIentity(num);
 		ids=identities;
-		for(var j=1,i=identities.length;j<=i;j++) {
+		for(var j=0,i=identities.length;j<i;j++) {
 			var id;
-			if(identities[j]==0) {
+			if(!identities[j]) {
 				id='平民';
 			}
 			else {
 				id='杀手';
 			}
-			var $identity='<li>'+j+'号--'+id+'   </li>';
+			var $identity='<li>'+Number(j+1)+'号--'+id+'   </li>';
 			$('.player_list').append($identity);
 		}
 	}
@@ -91,6 +91,9 @@ jQuery(document).ready(function($) {
 			setTimeout(function(){
 				$('.alert').remove()},1000);
 		}
+		else {
+			localStorage.setItem('ids',ids);
+			location.href='checkID.html'; 
+		}
 	})		
-	
 });
