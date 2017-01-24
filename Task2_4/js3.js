@@ -3,10 +3,9 @@ jQuery(document).ready(function($) {
 	var ids=localStorage.getItem('ids');
 	var id=[];
 	for(var i=0;i<ids.length;i++) {
-		id.push(ids[i]);
+		id.push(Number(ids[i]));
 		i++;
 	}
-	console.log(id);
 	//checking
 	var isChecking=true;
 	//number
@@ -20,7 +19,7 @@ jQuery(document).ready(function($) {
 	//check and pass
 	function candp() {
 		if($('.go').html()==='GO'){
-			location.href='game.html';
+			location.href='prepare.html';
 		}//jump
 		if(isChecking) {
 			num=Number($('.num').html())-1;
