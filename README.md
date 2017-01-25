@@ -1,2 +1,26 @@
 # JS_task
 A journey of IT_XiuZhenYuan
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Killers</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css2.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js2.js"></script>
+</head>
+<body>
+	<div class="p_d">
+		<p class="palyer_distribute">玩家分配</p>
+	</div>
+	<div class="player_list">
+	</div>
+	<div class="re_distribute">重新分配</div>
+	<p class="player_num">玩家人数：<a class="num">6</a>    人</p>
+	<p class="minus">-</p>
+	<input type="range" class="slider" id='slider' setp='1' min='6' max='18'>
+	<p class="plus">+</p>
+	<div class="begin_bt">GO</div>
+	</div>
+</body>
+</html>
