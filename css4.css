@@ -1,0 +1,105 @@
+body {
+	max-width: 350px;
+	max-height: 800px;
+	background: #DAD791;
+	margin: 10% auto;
+	border: 2px solid #FF5825;
+	border-radius: 5px;
+	font-family: "Microsoft YaHei", serif;
+}
+.x {
+	color: #FF5825;
+	margin-left: 90%;
+	font-size: 200%;
+	cursor: pointer;
+}
+.x:hover {
+	color: #E62E2E;
+}
+.title {
+	text-align: center;
+	color: #FF5825;
+	cursor: default;
+	font-size: 200%;
+}
+.players {
+	width: 80%;
+	border: 2px solid #FF5825;
+	border-radius: 5px;
+	margin: 10% auto;
+	cursor: default;
+}
+.box {
+	color: #E62E2E;
+	list-style: none;
+	display: inline-block;
+	height: 46px;
+	width: 70px;
+	margin: 3%;
+	border: #FF5825 solid 2px;
+	border-radius: 100%;
+	cursor: pointer;
+	text-align: center;
+	padding-top: 8%;
+}
+.saltfish {
+	background: #FF5825;
+	color: white;
+	list-style: none;
+	display: inline-block;
+	height: 46px;
+	width: 70px;
+	margin: 3%;
+	border: #FF5825 solid 2px;
+	border-radius: 100%;
+	cursor: pointer;
+	text-align: center;
+	padding-top: 8%;
+}
+.killer {
+	background: #E62E2E;
+	color: white;
+	list-style: none;
+	display: inline-block;
+	height: 46px;
+	width: 70px;
+	margin: 3%;
+	border: #E62E2E solid 2px;
+	border-radius: 100%;
+	cursor: pointer;
+	text-align: center;
+	padding-top: 8%;
+}
+.go {
+	cursor: pointer;
+	border: 2px solid #FF5825;
+	border-radius: 5px;
+	text-align: center;
+	width: 60%;
+	color: white;
+	background: #FF5825;
+	margin: 10% auto;
+
+}
+.go:hover {
+	background: #E62E2E;
+}
+.words {
+	text-align: center;
+	color: #FF5825;
+}
+.box2:hover {
+	background: #E62E2E;
+	color: white;
+	border: 2px solid #E62E2E;
+}
+.dead {
+	background: #E62E2E;
+	color: white;
+	border: 2px solid #E62E2E;
+}
+.tag {
+	background: #E62E2E;
+	color: white;
+	border: 2px solid #E62E2E;
+}

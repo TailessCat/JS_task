@@ -1,0 +1,147 @@
+body {
+	background: #DAD791;
+	max-width: 350px;
+	max-height: 800px;
+	margin: 10% auto;
+	border: 2px solid #FF5825;
+	border-radius: 5px;
+}
+.p_d {
+	display: inline-block;
+	width: 5%;
+	padding: 1%;
+	margin: 1%;
+	margin-top: 2%;
+}
+.palyer_distribute {
+	word-wrap: break-word; 
+	color: #FF5825;
+	cursor: default;
+	font-family: "Microsoft YaHei", serif;
+}
+.player_list {
+	width: 66%;
+	height: 5em;
+	display: inline-block;
+	border: 1px solid #FF5825;
+	border-radius: 3px;
+	padding-left: 5%;
+	overflow: auto;
+	margin-left: 3%;
+	cursor: default;
+	font-size: 80%;
+	padding-top: 4%;
+}
+.re_distribute {
+	background: #FF5825;
+	width:70%;
+	display: block;
+	color: white;
+	text-align: center;
+	border: 1px solid #FF5825;
+	border-radius: 3px;
+	cursor: pointer;
+	margin: -5% auto;
+
+}
+.re_distribute:hover {
+	background: #E62E2E;
+}
+.plus {
+	color: #FF5825;
+	width: 3%;
+	float: right;
+	cursor: pointer;
+	font-size: 200%;
+	margin-right: 5%;
+	margin-top: 12%;
+}
+.plus:hover {
+	color: #E62E2E;
+}
+.minus {
+	color: #FF5825;
+	width: 3%;
+	margin-left: 3%;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 200%;
+	margin-top: 12%;
+}
+.minus:hover {
+	color: #E62E2E;
+}
+.begin_bt {
+	background: #FF5825;
+	width:70%;
+	display: block;
+	color: white;
+	text-align: center;
+	border: 1px solid #FF5825;
+	border-radius: 3px;
+	cursor: pointer;
+	margin: 0 auto;
+	margin-bottom: 5%;
+}
+.begin_bt:hover {
+	background: #E62E2E;
+}
+.player_num {
+	margin-left: 1%;
+	color: #FF5825;
+	cursor: default;
+	margin-top: 15%;
+	margin-bottom: -10%;
+	font-family: "Microsoft YaHei", serif;
+}
+input[type=range] {
+  	-webkit-appearance: none;
+ 	display: inline-block;
+	width: 70%;
+	margin-left: 6%;
+	cursor: pointer;
+	outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 70%;
+  height: 3px;
+  background: #FF5825;
+  border-radius: 1px;
+  cursor: default;
+  margin-top: -9%;
+}
+input[type=range]::-webkit-slider-thumb {
+  border: 1px solid #E62E2E;
+  height: 5%;
+  width: 5%;
+  border-radius: 10px;
+  border: solid 10px #E62E2E;
+  background: #E62E2E;
+  cursor: pointer;
+  margin-top: -3%;
+  -webkit-appearance: none;
+}
+li {
+	width: 33.3%;
+	color: #FF5825;
+	cursor: default;
+	display: inline-block;
+	list-style: none;
+	font-family: "Microsoft YaHei", serif;
+	padding-right: 15%;
+	text-align: center;
+}
+li:hover {
+	color: #E62E2E;
+}
+.num {
+	color: #FF1919;
+}
+.alert {
+	max-width: 300px;
+	max-height: 100px;
+	color: #E62E2E;
+	font-family: "Microsoft YaHei", serif;
+	margin-left: 30%;
+	cursor: default;
+}
