@@ -1,0 +1,52 @@
+body {
+    background: url(background.jpg) no-repeat;
+    background-size: 100%
+}
+
+@media (max-width:1024px) {
+    body {
+        background: url(background.jpg)
+    }
+}
+
+.enter {
+    text-align: center;
+    border: 1px solid #d0d3d9;
+    background: #d0d3d9;
+    margin-top: 15%;
+    padding-bottom: 2%
+}
+
+@media (max-width:1024px) {
+    .enter {
+        margin-top: 45%
+    }
+}
+
+.enter i {
+    color: gray
+}
+
+.enter p {
+    color: #29bde0;
+    margin: 5% 0
+}
+
+.enter input {
+    margin: 3% 0
+}
+
+.enter .alert {
+    color: red;
+    margin: 1% 0
+}
+
+.enter button {
+    padding: 2%;
+    border: 1px solid #29bde0;
+    border-radius: 5px;
+    background: #29bde0;
+    color: #fff;
+    margin-top: 5%;
+    outline: 0
+}

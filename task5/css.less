@@ -1,0 +1,43 @@
+@body-background: url("background.jpg") no-repeat;
+@enter-border: 1px solid #d0d3d9;
+@enter-background:  #d0d3d9;
+body {
+	background: @body-background;
+	background-size: 100%;
+	@media (max-width:1024px) {
+		background: url(background.jpg);
+	}
+}
+.enter {
+	text-align: center;
+	border: @enter-border;
+	background: @enter-background;
+	margin-top: 15%;
+	@media (max-width:1024px) {
+		margin-top: 45%;
+	}
+	padding-bottom: 2%;
+	i {
+		color: gray;
+	}
+	p {
+		color: #29bde0;
+		margin: 5% 0;
+	}
+	input {
+		margin: 3% 0;
+	}
+	.alert {
+		color: red;
+		margin: 1% 0;
+	}
+	button {
+		padding: 2%;
+		border: 1px solid #29bde0;
+		border-radius: 5px;
+		background: #29bde0;
+		color: white;
+		margin-top: 5%;
+		outline: none;
+	}
+};
